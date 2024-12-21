@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IoT Dashboard</title>
+</head>
+<body>
+    <h1>IoT Sensor Data</h1>
+    <table border="1">
+        <tr>
+            <th>Device ID</th>
+            <th>Temperature (°C)</th>
+            <th>Humidity (%)</th>
+            <th>Timestamp</th>
+        </tr>
+        <tr th:each="data : ${sensorDataList}">
+            <td th:text="${data.deviceId}"></td>
+            <td th:text="${data.temperature}"></td>
+            <td th:text="${data.humidity}"></td>
+            <td th:text="${data.timestamp}"></td>
+        </tr>
+    </table>
+</body>
+</html>
